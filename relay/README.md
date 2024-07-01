@@ -105,14 +105,3 @@ or
 ```
 docker run -e "RELAY=10.241.64.7:9000" -e "USER=user1" -e "NAME=1" -e "DEST=0" client_func:latest
 ```
-
-### Running dockers with certs in env
-```
-sudo docker run -p 443:443 -p  5000-5100:5000-5100 -e RELAY_CA="$(cat certs/flockrelay-ca.pem)" -e RELAY_CERT="$(cat certs/0/cert.pem)" -e RELAY_KEY="$(cat certs/0/key.pem)" -e USER_CA="$(cat certs/user1/user-ca.pem)" -e PARTY_CERT="$(cat certs/user1/0/cert.pem)" -e PARTY_KEY="$(cat certs/user1/0/key.pem)"  praveingk/flock:certs python3 handler.py -s gcp
-```
-```
-sudo docker run -e RELAY_CA="$(cat certs/flockrelay-ca.pem)" -e RELAY_CERT="$(cat certs/1/cert.pem)" -e RELAY_KEY="$(cat certs/1/key.pem)" -e USER_CA="$(cat certs/user1/user-ca.pem)" -e PARTY_CERT="$(cat certs/user1/1/cert.pem)" -e PARTY_KEY="$(cat certs/user1/1/key.pem)" -p 443:443 -p 5000-5100:5000-5100 praveingk/flock:certs python3 handler.py -s aws
-```
-```
-sudo docker run -p 443:443 -p  5000-5100:5000-5100 -e RELAY_CA="$(cat certs/flockrelay-ca.pem)" -e RELAY_CERT="$(cat certs/2/cert.pem)" -e RELAY_KEY="$(cat certs/2/key.pem)" -e USER_CA="$(cat certs/user1/user-ca.pem)" -e PARTY_CERT="$(cat certs/user1/2/cert.pem)" -e PARTY_KEY="$(cat certs/user1/2/key.pem)"  praveingk/flock:certs python3 handler.py -s azure
-```
