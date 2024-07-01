@@ -20,7 +20,7 @@ Flock is a framework for deploying on-demand distributed-trust systems. This imp
 - [Citation](#citation)
 
 ## Artifact Evaluation
-Flock has received all three badges (Available, Functional, Reproduced) from OSDI 2024's artifact evaluation committee. The documentation for our artifact evaluation is archived in the [/artifacts](/artifacts/README.md) folder.
+Flock has received all three badges (Available, Functional, Reproduced) from OSDI 2024's artifact evaluation committee. The documentation for our artifact evaluation is archived in the [/artifacts](/artifacts/README.md) folder. The previous repo for Flock's artifact evaluation is archived and can be found [here](https://github.com/flock-org/flock-artifact)
 
 ## Prerequisites
 - Docker
